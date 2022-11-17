@@ -37,11 +37,19 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     }
 
 
 /*MODIFICACIONES BODY PAGES*/
 /*Body - Sobre Mi*/
+.body-sobre-mi{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .sobre-mi-main{
     margin: 1rem 0.5rem 0.5rem 0.5rem;
 }
@@ -53,6 +61,8 @@ body{
 .sobre-mi-main div h1{
     font-size: 1rem;
     text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
 .sobre-mi-main div p{
@@ -173,17 +183,19 @@ body{
 .viajes-main div h1{
     font-size: 1rem;
     text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
 main div img{
     margin: 0.25rem;
 }
 
-.viajes-main h2{
+.fotos-aus h2{
     background-color: rgba(85, 103, 115, 0.7);
     font-size: 1rem;
     text-align: center;
-    padding: 2rem 0rem 2rem 0rem;
+    margin: auto;
     font-weight: bold;
 }
 
@@ -210,6 +222,11 @@ main div img{
 
 
 /*Body - Contacto*/
+.body-contacto{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .contacto-main{
     color: rgb(191, 191, 184);
     margin: 1.5rem 0.75rem 0rem 0.75rem;
@@ -218,6 +235,7 @@ main div img{
 
 .contacto-main fieldset legend{
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .contacto-info, .contacto-info input, .contacto-info-enviar-eliminar input{
@@ -239,26 +257,28 @@ main div img{
 /*MODIFICACIONES GENERALES FOOTER*/    
 footer{
     color: rgb(191, 191, 184);
-    font-size: 0.75rem;
-
 }
 
 .flecha-arriba{
     position: fixed;
-    bottom: 2rem;
+    bottom: 3rem;
     width: 3rem;
 }
 
-footer h1, .sobre-mi-footer{
-    position: fixed;
-    bottom: 0.1rem;
+
+.sobre-mi-footer, .footer-home, .footer-contacto{
+    margin-top: auto;
 }
 
+
 footer h1, footer h2, footer h3{
-    margin: 0.75rem;
-    font-size: 0.75rem;
-    
+    font-size: 0.5rem;
 }
+
+.footer-home h1{
+    color: whitesmoke;
+}
+
 
 /*MEDIA QUERIES*/
 @media screen and (min-width:1024px){
@@ -556,6 +576,17 @@ footer h1, footer h2, footer h3{
     
     .fotos-aus .galeria-1-viajes .img-10{
         grid-area: foto-10;
+    }
+
+
+    /*FOOTER*/
+    footer h1, footer h2, footer h3{
+        margin: 0.75rem;
+        font-size: 0.75rem;
+        
+    }
+    .flecha-arriba{
+        bottom: 2rem;
     }
     
 }
