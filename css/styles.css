@@ -9,18 +9,16 @@
 .logo{
     width: 9rem;
     margin: 0.5rem 0rem 0.5rem 1rem;
-
 }
 
 .logo-redes img{
     width: 1.5rem;
-    
 }
 
 .color-nav{
     background-color: rgba(85, 103, 115, 0.7);
-    
 }
+
 
 /*BODY*/
 /*MODIFICACIONES GENERALES BODY*/
@@ -40,7 +38,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    }
+}
 
 
 /*MODIFICACIONES BODY PAGES*/
@@ -50,14 +48,15 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
+
 .sobre-mi-main{
     margin: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
 .sobre-mi-main div{
     color: rgb(191, 191, 184);
-
 }
+
 .sobre-mi-main div h1{
     font-size: 1rem;
     text-align: center;
@@ -82,8 +81,7 @@ body{
 .eventos-menu{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .eventos-menu li{
@@ -91,8 +89,6 @@ body{
     margin: 0.5rem 0rem 0.5rem 0rem;
     padding: 0.5rem;
     box-shadow: 1px 1px 2px black;
-
-     
 }
 
 .eventos-menu li a{
@@ -100,22 +96,20 @@ body{
     text-decoration: none;
     text-align: center;
     font-size: 0.75rem;
-
 }
 
 .eventos-menu li:hover{
-    
     transform: scale(0.98);
     transition: transform 0.2s;
-    box-shadow: -2px -2px -5px black;
+    box-shadow: -2px -2px 5px black;
 }
 
 .eventos-main{
     width: 100%;
-    max-width: 120rem;
     margin: auto;
     padding: 0.5rem 0.75rem 2rem 0rem;
 }
+
 
 /*Body - Eventos/trabajos - Galerias*/
 .eventos-main h1{
@@ -127,16 +121,15 @@ body{
     padding: 2rem 0rem 2rem 0rem;
     font-weight: bold;
 }
+
 .eventos-main .galeria-1 img, .eventos-main .galeria-eventos a img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .eventos-main .galeria-eventos a{
     position: relative;
-    
 }
 
 .eventos-main .galeria-eventos .evento-1::before{
@@ -145,17 +138,14 @@ body{
 
 .eventos-main .galeria-eventos .evento-2::before{
     content: "Esperance Community Arts";
-
 }
 
 .eventos-main .galeria-eventos .evento-3::before{
     content: "Esperance Wildflower Festival 2022";
-
 }
 
 .eventos-main .galeria-eventos .evento-4::before{
     content: "Kamal's Spanish Paella - Perth";
-
 }
 
 .eventos-main .galeria-eventos a::before{
@@ -195,18 +185,18 @@ main div img{
     background-color: rgba(85, 103, 115, 0.7);
     font-size: 1rem;
     text-align: center;
-    margin: auto;
+    margin-left: 0.5rem;
+    padding: 2rem 0rem;
     font-weight: bold;
 }
 
 .viajes-main p{
     font-size: 0.75rem;
-    margin: 0rem 0.5rem 0rem 0.5rem;
+    margin: 0rem 0.5rem;
 }
 
 .carousel-viajes{
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-
+    padding: 0.5rem;
 }
 
 .fotos-aus{
@@ -227,6 +217,7 @@ main div img{
     flex-direction: column;
     min-height: 100vh;
 }
+
 .contacto-main{
     color: rgb(191, 191, 184);
     margin: 1.5rem 0.75rem 0rem 0.75rem;
@@ -260,16 +251,12 @@ footer{
 }
 
 .flecha-arriba{
-    position: fixed;
-    bottom: 3rem;
-    width: 3rem;
+    width: 1rem;
 }
-
 
 .sobre-mi-footer, .footer-home, .footer-contacto{
     margin-top: auto;
 }
-
 
 footer h1, footer h2, footer h3{
     font-size: 0.5rem;
@@ -321,94 +308,94 @@ footer h1, footer h2, footer h3{
     
     .eventos-main .galeria-eventos .evento-1::before{
         content: "Lucky Bay Brewing - Western Australia";
-    
     }
     
     .eventos-main .galeria-eventos .evento-2::before{
-    content: "Esperance Community Arts";
-    
+        content: "Esperance Community Arts";
     }
     
     .eventos-main .galeria-eventos .evento-3::before{
         content: "Esperance Wildflower Festival 2022";
-    
     }
     
     .eventos-main .galeria-eventos .evento-4::before{
         content: "Kamal's Spanish Paella - Perth";
-    
     }
     
     .eventos-main .galeria-eventos a::before{
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color:  rgba(30, 45, 64, 0.6);
-            transform: translate(100%);
-            transition: transform 0.5s;
-            color: whitesmoke;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color:  rgba(30, 45, 64, 0.6);
+        transform: translate(100%);
+        transition: transform 0.5s;
+        color: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
     }
     
     .eventos-main .galeria-eventos a:hover::before{
-            transform: translate(0);
+        transform: translate(0);
     }
     
     .eventos-main .galeria-eventos{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto;
-            grid-gap: 0.5rem;
-            grid-template-areas: 
-                "evento-3 evento-2 evento-4"
-                "evento-3 evento-1 evento-1";
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0.5rem;
+        grid-template-areas: 
+            "evento-3 evento-2 evento-4"
+            "evento-3 evento-1 evento-1";
     }
     
     .eventos-main .galeria-eventos .evento-1{
-            grid-area: evento-1;
+        grid-area: evento-1;
     }
     
     .eventos-main .galeria-eventos .evento-2{
-            grid-area: evento-2;
+        grid-area: evento-2;
     }
     
     .eventos-main .galeria-eventos .evento-3{
-            grid-area: evento-3;
+        grid-area: evento-3;
     }
     
     .eventos-main .galeria-eventos .evento-4{
-            grid-area: evento-4;
+        grid-area: evento-4;
     }
+
+
     /*EVENTOS - GALERIAS*/
     .eventos-main h1{
         background-color: rgba(85, 103, 115, 0.7);
-        font-size: 22px;
+        font-size: 1.5rem;
         text-align: center;
-        padding: 2rem 0rem 2rem 0rem;
+        padding: 2rem 0rem;
         font-weight: bold;
     }
+
     .eventos-menu{
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
+
     .eventos-menu li{
         display: inline-block;
         margin: 1rem 0rem 1rem 0rem;
         padding: 1rem;
          
     }
+
     .eventos-menu li a{
         color: rgb(191, 191, 184);
         text-decoration: none;
         text-align: center;
         font-size: 1rem;
-    
     }
     
     .eventos-menu li:hover{
@@ -417,6 +404,7 @@ footer h1, footer h2, footer h3{
         transition: transform 0.2s;
         box-shadow: -2px -2px -5px black;
     }
+
     .eventos-main .galeria-1{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -434,33 +422,43 @@ footer h1, footer h2, footer h3{
     .eventos-main .galeria-1 .img-1{
         grid-area: foto-1;
     }
+
     .eventos-main .galeria-1 .img-2{
         grid-area: foto-2;
     }
+
     .eventos-main .galeria-1 .img-3{
         grid-area: foto-3;
     }
+
     .eventos-main .galeria-1 .img-4{
         grid-area: foto-4;
     }
+
     .eventos-main .galeria-1 .img-5{
         grid-area: foto-5;
     }
+
     .eventos-main .galeria-1 .img-6{
         grid-area: foto-6;
     }
+
     .eventos-main .galeria-1 .img-7{
         grid-area: foto-7;
     }
+
     .eventos-main .galeria-1 .img-8{
         grid-area: foto-8;
     }
+
     .eventos-main .galeria-1 .img-9{
         grid-area: foto-9;
     }
+
     .eventos-main .galeria-1 .img-10{
         grid-area: foto-10;
     }
+
 
     /*VIAJES*/
     .viajes-main div {
@@ -469,25 +467,20 @@ footer h1, footer h2, footer h3{
     }
     
     .viajes-main div h1{
-        font-size: 22px;
+        font-size: 1.5rem;
     }
-    
-    main div img{
-        width: 440px;
-        display: inline-block;
-        margin: 5px;
-    }
-    
+        
     .viajes-main h2{
         background-color: rgba(85, 103, 115, 0.7);
-        font-size: 22px;
+        font-size: 1.5rem;
         text-align: center;
-        padding: 2rem 0rem 2rem 0rem;
+        margin-right: 0.5rem;
+        padding: 2rem 0rem;
         font-weight: bold;
     }
     
     .viajes-main p{
-        font-size: 15px;
+        font-size: 1rem;
     }
     
     .porque-viajo{
@@ -583,10 +576,10 @@ footer h1, footer h2, footer h3{
     footer h1, footer h2, footer h3{
         margin: 0.75rem;
         font-size: 0.75rem;
-        
     }
+
     .flecha-arriba{
-        bottom: 2rem;
+        width: 3rem;
     }
     
 }
