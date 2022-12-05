@@ -1,0 +1,96 @@
+/*Body - Viajes*/
+.viajes-main{
+    div{
+        color: $color-texto;
+        margin-top: 0.25rem;
+        h1{
+            font-size: $titulo-principal;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        p{
+            font-size: $parrafo;
+            margin: 0rem 0.75rem;
+        }
+        .carousel-viajes{
+            padding: 0.5rem 0.75rem;
+        }
+    }
+    .fotos-aus{
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        div{
+            h2{
+                background-color: $color-fondo-secundario;
+                font-size: $titulo-principal;
+                text-align: center;
+                margin-left: 0.25rem;
+                margin-right: 0.25rem;
+                padding: 2rem 0rem;
+                font-weight: bold;
+            }
+        }
+        .galeria-1-viajes{
+            img{
+                @include img;
+                padding: 0.25rem;
+            }
+        }
+        
+    } 
+}
+
+/*Media Queries - Viajes*/
+@media screen and (min-width:1024px){    
+    .viajes-main {
+        .viaje-australia{
+            color: $color-texto;
+            margin: 0.5rem 0rem 0.75rem 0rem;
+            display: grid;
+            padding: 0rem 1rem 3rem 1rem;
+            grid-gap: 0.5rem;
+            align-items: center;
+            align-content: center;
+            grid-template-columns: 3fr 4fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "texto carousel"
+                "texto carousel";
+            .australia-texto{
+                grid-area: texto;
+                h1{
+                    font-size: $titulo-principal-desktop;
+                }
+                p{
+                    font-size: $parrafo-desktop;
+                }
+            }
+            .carousel-viajes{
+                grid-area: carousel;
+                margin: auto;
+            }
+        }
+        .fotos-aus{
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            div{
+                h2{
+                    background-color: $color-fondo-secundario;
+                    font-size: $titulo-principal-desktop;
+                    text-align: center;
+                    margin-right: 0.75rem;
+                    padding: 2rem 0rem;
+                    font-weight: bold;
+                }
+            }
+            .galeria-1-viajes{
+                @include grid-galeria;
+                img{
+                    @include img;
+                }
+            }
+
+        }
+    }
+}

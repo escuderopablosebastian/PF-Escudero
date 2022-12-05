@@ -1,0 +1,128 @@
+//NESTING
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+//IMPORT ARCHIVOS SECUNDARIOS
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+@import "contenedores/home";
+@import "contenedores/sobre-mi";
+@import "contenedores/eventos-trabajos";
+@import "contenedores/viajes";
+@import "contenedores/contacto";
+
+
+/*MODIFICACIONES GENERALES BODY*/
+body{
+    background-color: $color-fondo-primario;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*MODIFICACIONES GENERALES HEADER*/
+header{
+    nav{
+        div{
+            a{
+                .logo{
+                    width: 6rem;
+                    margin: 0.5rem 0rem 0.5rem 1rem;
+                }
+            }
+            div{
+                ul{
+                    .logo-redes{
+                        img{
+                            width: $ancho-redes;
+                        }
+                    }
+                    li{
+                        a{
+                            &:hover{
+                                color: $color-fondo-primario !important;
+                                transform: scale(0.97);
+                                transition: transform 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .color-nav{
+        background-color: $color-fondo-secundario;
+    }
+}
+
+/*MODIFICACIONES GENERALES FOOTER*/    
+footer{
+    padding: 0.5rem;
+    color: $color-texto;
+    margin-top: auto;
+    a{
+        .flecha-arriba{
+            width: 2rem;
+            margin-bottom: 0.25rem;
+        }
+    }
+    h1{
+        @extend %footer-mobile;
+    }
+    h2{
+        @extend %footer-mobile;
+    }
+    h3{
+        @extend %footer-mobile;
+    }
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 1024px){
+    /*HEADER*/
+    header{
+        nav{
+            div{
+                a{
+                    .logo{
+                        width: 9rem;
+                    }
+                }
+                div{
+                    ul{
+                        .logo-redes{
+                            img{
+                                width: $ancho-redes-desktop;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*FOOTER*/
+    footer{
+        
+        h1{
+            margin: 0.75rem;
+            font-size: $texto-footer-desktop;
+        }
+        h2{
+            margin: 0.75rem;
+            font-size: $texto-footer-desktop;
+        }
+        h3{
+            margin: 0.75rem;
+            font-size: $texto-footer-desktop;
+        }
+        a{
+            .flecha-arriba{
+                width: 3rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,86 @@
+/*Body - Contacto*/
+.body-contacto{
+    @include flex-1;
+}
+
+.contacto-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .contacto-form{
+        color: $color-texto;
+        margin: 1.5rem 0.75rem 0rem 0.75rem;
+        text-align: center;
+        fieldset{
+            legend{
+                font-size: $titulo-principal;
+                font-weight: bold;
+            }
+            .contacto-info{
+                font-size: $parrafo;
+                margin: 0.5rem 0rem;
+                input{
+                    font-size: $parrafo;
+                    margin: 0.5rem 0rem;
+                    width: 100%;
+                    padding-left: 0.25rem;
+                }
+            }
+            .contacto-comentario{
+                input{
+                    padding-bottom: 5rem;                    
+                }
+            }
+            .contacto-info-botones{
+                input{
+                    font-size: $parrafo;
+                    margin: 0.5rem;
+                    width: 7.5rem;
+                    border-radius: 1.5rem;
+                }
+            }
+        }
+    }
+    img{
+        width: 95%;
+        margin: auto;
+        display: block;
+        padding: 1rem;
+    }
+}
+
+/*Media queries - Contacto*/
+@media screen and (min-width:1024px){
+    .contacto-main{
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto;
+        .contacto-form{
+            fieldset{
+                legend{
+                    font-size: $titulo-principal-desktop;
+                }
+                .contacto-info{
+                    font-size: $parrafo-desktop;
+                    input{
+                        font-size: $parrafo-desktop;
+                        margin: 0.75rem 0rem;
+                        width: 75%;
+                        padding-left: 0.25rem;
+                    }
+                }
+                .contacto-info-botones{
+                    input{
+                        font-size: $parrafo-desktop;
+                        margin: 0.75rem 0rem;
+                        margin: 1rem;
+                        width: 10rem;
+                        border-radius: 1.5rem;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

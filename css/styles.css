@@ -1,585 +1,446 @@
 /*RESET*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+footer h1, footer h2, footer h3 {
+  margin: 0.25rem;
+  font-size: 0.5rem; }
 
-/*MODIFICACIONES GENERALES HEADER*/
-.logo{
-    width: 9rem;
-    margin: 0.5rem 0rem 0.5rem 1rem;
-}
+/*Body - Home*/
+body .home-body {
+  background-image: url(../img/Home/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
 
-.logo-redes img{
-    width: 1.5rem;
-}
+/*Footer - home*/
+.footer-home h1 {
+  color: whitesmoke; }
 
-.color-nav{
-    background-color: rgba(85, 103, 115, 0.7);
-}
-
-
-/*BODY*/
-/*MODIFICACIONES GENERALES BODY*/
-body{
-    background-color: rgb(30, 45, 64);
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-/*MODIFICACIONES BODY HOME*/
-.home-body{
-    background-image: url(../img/Home/home.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-/*MODIFICACIONES BODY PAGES*/
 /*Body - Sobre Mi*/
-.body-sobre-mi{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+body .body-sobre-mi {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
 
-.sobre-mi-main{
-    margin: 1rem 0.5rem 0.5rem 0.5rem;
-}
-
-.sobre-mi-main div{
-    color: rgb(191, 191, 184);
-}
-
-.sobre-mi-main div h1{
-    font-size: 1rem;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-.sobre-mi-main div p{
-    font-size: 0.75rem;
-    text-align: center;
-}
-
-.sobre-mi-main img{
-    width: 80%;
+.sobre-mi-main {
+  margin: 0rem 0.5rem; }
+  .sobre-mi-main div {
+    color: #bfbfb8; }
+    .sobre-mi-main div h1 {
+      font-size: 1rem;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 1rem; }
+    .sobre-mi-main div p {
+      font-size: 0.75rem;
+      text-align: center;
+      margin: 0rem 0.75rem; }
+      .sobre-mi-main div p a {
+        text-decoration-line: none;
+        color: #bfbfb8;
+        font-weight: bolder; }
+        .sobre-mi-main div p a:hover {
+          color: rgba(85, 103, 115, 0.7);
+          transition: 0.2s; }
+  .sobre-mi-main img {
+    width: 95%;
     margin: auto;
     display: block;
-    padding-bottom: 2rem;
-}
+    margin-top: 0.5rem; }
 
-
-/*Body - Eventos/trabajos*/
-.eventos-menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.eventos-menu li{
-    display: inline-block;
-    margin: 0.5rem 0rem 0.5rem 0rem;
-    padding: 0.5rem;
-    box-shadow: 1px 1px 2px black;
-}
-
-.eventos-menu li a{
-    color: rgb(191, 191, 184);
-    text-decoration: none;
-    text-align: center;
-    font-size: 0.75rem;
-}
-
-.eventos-menu li:hover{
-    transform: scale(0.98);
-    transition: transform 0.2s;
-    box-shadow: -2px -2px 5px black;
-}
-
-.eventos-main{
-    width: 100%;
-    margin: auto;
-    padding: 0.5rem 0.75rem 2rem 0rem;
-}
-
-
-/*Body - Eventos/trabajos - Galerias*/
-.eventos-main h1{
-    background-color: rgba(85, 103, 115, 0.7);
-    color: rgb(191, 191, 184);
-    margin: 1rem 0rem 0.5rem 0.5rem;
-    font-size: 1rem;
-    text-align: center;
-    padding: 2rem 0rem 2rem 0rem;
-    font-weight: bold;
-}
-
-.eventos-main .galeria-1 img, .eventos-main .galeria-eventos a img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.eventos-main .galeria-eventos a{
-    position: relative;
-}
-
-.eventos-main .galeria-eventos .evento-1::before{
-    content: "Lucky Bay Brewing - Western Australia";
-}
-
-.eventos-main .galeria-eventos .evento-2::before{
-    content: "Esperance Community Arts";
-}
-
-.eventos-main .galeria-eventos .evento-3::before{
-    content: "Esperance Wildflower Festival 2022";
-}
-
-.eventos-main .galeria-eventos .evento-4::before{
-    content: "Kamal's Spanish Paella - Perth";
-}
-
-.eventos-main .galeria-eventos a::before{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
+/*Media Queries - Sobre-mi*/
+@media screen and (min-width: 1024px) {
+  .sobre-mi-main {
+    display: grid;
     align-items: center;
-    background-color:  rgba(30, 45, 64, 0.6);
-    padding: 2rem 0rem 2rem 0rem;
-    color: whitesmoke;
-    font-size: 1rem;
-}
-
-
-/*Body - Viajes*/
-.viajes-main div{
-    color: rgb(191, 191, 184);
-    margin: 1rem 0rem 0.5rem 0rem;
-}
-
-.viajes-main div h1{
-    font-size: 1rem;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-main div img{
-    margin: 0.25rem;
-}
-
-.fotos-aus h2{
-    background-color: rgba(85, 103, 115, 0.7);
-    font-size: 1rem;
-    text-align: center;
-    margin-left: 0.5rem;
-    padding: 2rem 0rem;
-    font-weight: bold;
-}
-
-.viajes-main p{
-    font-size: 0.75rem;
-    margin: 0rem 0.5rem;
-}
-
-.carousel-viajes{
-    padding: 0.5rem;
-}
-
-.fotos-aus{
-    padding-right: 0.75rem;
-    padding-left: 0.25rem;
-}
-
-.fotos-aus .galeria-1-viajes img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/*Body - Contacto*/
-.body-contacto{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.contacto-main{
-    color: rgb(191, 191, 184);
-    margin: 1.5rem 0.75rem 0rem 0.75rem;
-    text-align: center;
-}
-
-.contacto-main fieldset legend{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.contacto-info, .contacto-info input, .contacto-info-enviar-eliminar input{
-    font-size: 1rem;
-    margin: 0.75rem 0rem 0.75rem 0.75rem;
-}
-
-.contacto-info input{
-    width: 75%;
-}
-
-.contacto-info-enviar-eliminar input{
-    margin: 1rem;
-    width: 10rem;
-    border-radius: 1.5rem;
-}
-
-
-/*MODIFICACIONES GENERALES FOOTER*/    
-footer{
-    color: rgb(191, 191, 184);
-}
-
-.flecha-arriba{
-    width: 1rem;
-}
-
-.sobre-mi-footer, .footer-home, .footer-contacto{
-    margin-top: auto;
-}
-
-footer h1, footer h2, footer h3{
-    font-size: 0.5rem;
-}
-
-.footer-home h1{
-    color: whitesmoke;
-}
-
-
-/*MEDIA QUERIES*/
-@media screen and (min-width:1024px){
-    
-    /*SOBRE MI-MAIN*/
-    .sobre-mi-main{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        grid-gap: 0.5rem;
-        margin: 1.5rem 0.75rem 0.75rem 0.5rem;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "img texto"
-            "img texto";
-    }
-    
-    .sobre-mi-main div{
-        grid-area: texto;
-        color: rgb(191, 191, 184);
-    }
-    .sobre-mi-main div h1{
+    justify-content: center;
+    margin: 1.5rem 0.75rem 0.75rem 0.5rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "img texto" "img texto"; }
+    .sobre-mi-main div {
+      grid-area: texto;
+      color: #bfbfb8; }
+      .sobre-mi-main div h1 {
         font-size: 1.5rem;
-        text-align: left;
-    }
-    
-    .sobre-mi-main div p{
+        text-align: left; }
+      .sobre-mi-main div p {
         font-size: 1rem;
         text-align: left;
-    }
-   
+        margin-left: 0; } }
 
-    /*EVENTOS-MAIN*/
-    .eventos-main .galeria-eventos a{
-        position: relative;
-        cursor: pointer;
-        overflow: hidden;
-    }
-    
-    .eventos-main .galeria-eventos .evento-1::before{
-        content: "Lucky Bay Brewing - Western Australia";
-    }
-    
-    .eventos-main .galeria-eventos .evento-2::before{
-        content: "Esperance Community Arts";
-    }
-    
-    .eventos-main .galeria-eventos .evento-3::before{
-        content: "Esperance Wildflower Festival 2022";
-    }
-    
-    .eventos-main .galeria-eventos .evento-4::before{
-        content: "Kamal's Spanish Paella - Perth";
-    }
-    
-    .eventos-main .galeria-eventos a::before{
+/*Body - Eventos/trabajos*/
+.eventos-main {
+  width: 100%;
+  padding: 0.5rem 0.75rem 1rem 1rem; }
+  .eventos-main h1 {
+    background-color: rgba(85, 103, 115, 0.7);
+    color: #bfbfb8;
+    margin: 1rem 0rem 0.5rem 0rem;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 0rem 2rem 0rem;
+    font-weight: bold; }
+  .eventos-main .galeria-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 0.5rem; }
+  .eventos-main .galeria-eventos .evento-1::before {
+    content: "Lucky Bay Brewing - Western Australia"; }
+  .eventos-main .galeria-eventos .evento-2::before {
+    content: "Esperance Community Arts"; }
+  .eventos-main .galeria-eventos .evento-3::before {
+    content: "Esperance Wildflower Festival 2022"; }
+  .eventos-main .galeria-eventos .evento-4::before {
+    content: "Kamal's Spanish Paella - Perth"; }
+  .eventos-main .galeria-eventos a {
+    position: relative; }
+    .eventos-main .galeria-eventos a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 0.5rem 0rem 0.5rem 0.5rem; }
+    .eventos-main .galeria-eventos a::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(30, 45, 64, 0.6);
+      color: whitesmoke;
+      font-size: 1rem; }
+  .eventos-main nav .eventos-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .eventos-main nav .eventos-menu li {
+      display: inline-block;
+      margin: 0.5rem 0rem 0.5rem 0rem;
+      padding: 0.5rem;
+      box-shadow: 1px 1px 2px black; }
+      .eventos-main nav .eventos-menu li a {
+        color: #bfbfb8;
+        text-decoration: none;
+        text-align: center;
+        font-size: 0.75rem; }
+      .eventos-main nav .eventos-menu li:hover {
+        transform: scale(0.98);
+        transition: transform 0.2s;
+        box-shadow: -2px -2px 5px black; }
+
+/*Media Queries - Eventos*/
+@media screen and (min-width: 1024px) {
+  .eventos-main .galeria-eventos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "evento-3 evento-2 evento-4" "evento-3 evento-1 evento-1"; }
+    .eventos-main .galeria-eventos a {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden; }
+      .eventos-main .galeria-eventos a img {
+        padding: 0.5rem; }
+      .eventos-main .galeria-eventos a::before {
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background-color:  rgba(30, 45, 64, 0.6);
+        background-color: rgba(30, 45, 64, 0.6);
         transform: translate(100%);
         transition: transform 0.5s;
         color: whitesmoke;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
-    }
-    
-    .eventos-main .galeria-eventos a:hover::before{
-        transform: translate(0);
-    }
-    
-    .eventos-main .galeria-eventos{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-gap: 0.5rem;
-        grid-template-areas: 
-            "evento-3 evento-2 evento-4"
-            "evento-3 evento-1 evento-1";
-    }
-    
-    .eventos-main .galeria-eventos .evento-1{
-        grid-area: evento-1;
-    }
-    
-    .eventos-main .galeria-eventos .evento-2{
-        grid-area: evento-2;
-    }
-    
-    .eventos-main .galeria-eventos .evento-3{
-        grid-area: evento-3;
-    }
-    
-    .eventos-main .galeria-eventos .evento-4{
-        grid-area: evento-4;
-    }
-
-
-    /*EVENTOS - GALERIAS*/
-    .eventos-main h1{
-        background-color: rgba(85, 103, 115, 0.7);
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 2rem 0rem;
-        font-weight: bold;
-    }
-
-    .eventos-menu{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .eventos-menu li{
-        display: inline-block;
-        margin: 1rem 0rem 1rem 0rem;
-        padding: 1rem;
-         
-    }
-
-    .eventos-menu li a{
-        color: rgb(191, 191, 184);
-        text-decoration: none;
-        text-align: center;
-        font-size: 1rem;
-    }
-    
-    .eventos-menu li:hover{
+        font-size: 1.25rem; }
+      .eventos-main .galeria-eventos a:hover::before {
+        transform: translate(0); }
+    .eventos-main .galeria-eventos .evento-1 {
+      grid-area: evento-1; }
+      .eventos-main .galeria-eventos .evento-1::before {
+        content: "Lucky Bay Brewing - Western Australia"; }
+    .eventos-main .galeria-eventos .evento-2 {
+      grid-area: evento-2; }
+      .eventos-main .galeria-eventos .evento-2::before {
+        content: "Esperance Community Arts"; }
+    .eventos-main .galeria-eventos .evento-3 {
+      grid-area: evento-3; }
+      .eventos-main .galeria-eventos .evento-3::before {
+        content: "Esperance Wildflower Festival 2022"; }
+    .eventos-main .galeria-eventos .evento-4 {
+      grid-area: evento-4; }
+      .eventos-main .galeria-eventos .evento-4::before {
+        content: "Kamal's Spanish Paella - Perth"; }
+  .eventos-main h1 {
+    background-color: rgba(85, 103, 115, 0.7);
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 2rem 0rem;
+    font-weight: bold;
+    margin-right: 0.5rem; }
+  .eventos-main .galeria-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+    grid-template-areas: "foto-2 foto-3 foto-4" "foto-2 foto-1 foto-1" "foto-5 foto-5 foto-6" "foto-5 foto-5 foto-6" "foto-7 foto-7 foto-8" "foto-9 foto-10 foto-8"; }
+    .eventos-main .galeria-1 .img-1 {
+      grid-area: foto-1; }
+    .eventos-main .galeria-1 .img-2 {
+      grid-area: foto-2; }
+    .eventos-main .galeria-1 .img-3 {
+      grid-area: foto-3; }
+    .eventos-main .galeria-1 .img-4 {
+      grid-area: foto-4; }
+    .eventos-main .galeria-1 .img-5 {
+      grid-area: foto-5; }
+    .eventos-main .galeria-1 .img-6 {
+      grid-area: foto-6; }
+    .eventos-main .galeria-1 .img-7 {
+      grid-area: foto-7; }
+    .eventos-main .galeria-1 .img-8 {
+      grid-area: foto-8; }
+    .eventos-main .galeria-1 .img-9 {
+      grid-area: foto-9; }
+    .eventos-main .galeria-1 .img-10 {
+      grid-area: foto-10; }
+  .eventos-main nav .eventos-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .eventos-main nav .eventos-menu li {
+      display: inline-block;
+      margin: 1rem 0rem 1rem 0rem;
+      padding: 1rem; }
+      .eventos-main nav .eventos-menu li:hover {
         background-color: rgba(85, 103, 115, 0.7);
         transform: scale(0.98);
         transition: transform 0.2s;
-        box-shadow: -2px -2px -5px black;
-    }
-
-    .eventos-main .galeria-1{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-gap: 0.5rem;
-        grid-template-areas: 
-            "foto-2 foto-3 foto-4"
-            "foto-2 foto-1 foto-1"
-            "foto-5 foto-5 foto-6"
-            "foto-5 foto-5 foto-6"
-            "foto-7 foto-7 foto-8"
-            "foto-9 foto-10 foto-8";
-    }
-
-    .eventos-main .galeria-1 .img-1{
-        grid-area: foto-1;
-    }
-
-    .eventos-main .galeria-1 .img-2{
-        grid-area: foto-2;
-    }
-
-    .eventos-main .galeria-1 .img-3{
-        grid-area: foto-3;
-    }
-
-    .eventos-main .galeria-1 .img-4{
-        grid-area: foto-4;
-    }
-
-    .eventos-main .galeria-1 .img-5{
-        grid-area: foto-5;
-    }
-
-    .eventos-main .galeria-1 .img-6{
-        grid-area: foto-6;
-    }
-
-    .eventos-main .galeria-1 .img-7{
-        grid-area: foto-7;
-    }
-
-    .eventos-main .galeria-1 .img-8{
-        grid-area: foto-8;
-    }
-
-    .eventos-main .galeria-1 .img-9{
-        grid-area: foto-9;
-    }
-
-    .eventos-main .galeria-1 .img-10{
-        grid-area: foto-10;
-    }
-
-
-    /*VIAJES*/
-    .viajes-main div {
-        color: rgb(191, 191, 184);
-        margin: 0.5rem 0rem 0.75rem 0rem;
-    }
-    
-    .viajes-main div h1{
-        font-size: 1.5rem;
-    }
-        
-    .viajes-main h2{
-        background-color: rgba(85, 103, 115, 0.7);
-        font-size: 1.5rem;
+        box-shadow: -2px -2px -5px black; }
+      .eventos-main nav .eventos-menu li a {
+        color: #bfbfb8;
+        text-decoration: none;
         text-align: center;
-        margin-right: 0.5rem;
-        padding: 2rem 0rem;
-        font-weight: bold;
-    }
-    
-    .viajes-main p{
-        font-size: 1rem;
-    }
-    
-    .porque-viajo{
-        display: grid;
-        padding: 0rem 1rem 3rem 1rem;
-        grid-gap: 0.5rem;
-        align-items: center;
-        align-content: center;
-        grid-template-columns: 3fr 4fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "texto carousel"
-            "texto carousel";
-    }
-    
-    .carousel-viajes{
-        grid-area: carousel;
-        margin: auto;
-    }
-    
-    .porque-viajo .porque-viajo-texto{
-        grid-area: texto;  
-    }
-    
-    .fotos-aus{
-        padding-right: 0.5rem;
-        padding-left: 0.25rem;
-    }
-    
-    .fotos-aus .galeria-1-viajes img{
+        font-size: 1rem; } }
+
+/*Body - Viajes*/
+.viajes-main div {
+  color: #bfbfb8;
+  margin-top: 0.25rem; }
+  .viajes-main div h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem; }
+  .viajes-main div p {
+    font-size: 0.75rem;
+    margin: 0rem 0.75rem; }
+  .viajes-main div .carousel-viajes {
+    padding: 0.5rem 0.75rem; }
+
+.viajes-main .fotos-aus {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem; }
+  .viajes-main .fotos-aus div h2 {
+    background-color: rgba(85, 103, 115, 0.7);
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    padding: 2rem 0rem;
+    font-weight: bold; }
+  .viajes-main .fotos-aus .galeria-1-viajes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0.25rem; }
+
+/*Media Queries - Viajes*/
+@media screen and (min-width: 1024px) {
+  .viajes-main .viaje-australia {
+    color: #bfbfb8;
+    margin: 0.5rem 0rem 0.75rem 0rem;
+    display: grid;
+    padding: 0rem 1rem 3rem 1rem;
+    grid-gap: 0.5rem;
+    align-items: center;
+    align-content: center;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: auto;
+    grid-template-areas: "texto carousel" "texto carousel"; }
+    .viajes-main .viaje-australia .australia-texto {
+      grid-area: texto; }
+      .viajes-main .viaje-australia .australia-texto h1 {
+        font-size: 1.25rem; }
+      .viajes-main .viaje-australia .australia-texto p {
+        font-size: 1rem; }
+    .viajes-main .viaje-australia .carousel-viajes {
+      grid-area: carousel;
+      margin: auto; }
+  .viajes-main .fotos-aus {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
+    .viajes-main .fotos-aus div h2 {
+      background-color: rgba(85, 103, 115, 0.7);
+      font-size: 1.25rem;
+      text-align: center;
+      margin-right: 0.75rem;
+      padding: 2rem 0rem;
+      font-weight: bold; }
+    .viajes-main .fotos-aus .galeria-1-viajes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 0.5rem;
+      padding-right: 0.5rem;
+      grid-template-areas: "foto-2 foto-3 foto-4" "foto-2 foto-1 foto-1" "foto-5 foto-5 foto-6" "foto-5 foto-5 foto-6" "foto-7 foto-7 foto-8" "foto-9 foto-10 foto-8"; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-1 {
+        grid-area: foto-1; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-2 {
+        grid-area: foto-2; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-3 {
+        grid-area: foto-3; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-4 {
+        grid-area: foto-4; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-5 {
+        grid-area: foto-5; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-6 {
+        grid-area: foto-6; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-7 {
+        grid-area: foto-7; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-8 {
+        grid-area: foto-8; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-9 {
+        grid-area: foto-9; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-10 {
+        grid-area: foto-10; }
+      .viajes-main .fotos-aus .galeria-1-viajes img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-    }
-    
-    .fotos-aus .galeria-1-viajes{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-gap: 0.5rem;
-        padding-right: 0.5rem;
-        grid-template-areas: 
-            "foto-2 foto-3 foto-4"
-            "foto-2 foto-1 foto-1"
-            "foto-5 foto-5 foto-6"
-            "foto-5 foto-5 foto-6"
-            "foto-7 foto-7 foto-8"
-            "foto-9 foto-10 foto-8";
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-1{
-        grid-area: foto-1;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-2{
-        grid-area: foto-2;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-3{
-        grid-area: foto-3;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-4{
-        grid-area: foto-4;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-5{
-        grid-area: foto-5;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-6{
-        grid-area: foto-6;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-7{
-        grid-area: foto-7;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-8{
-        grid-area: foto-8;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-9{
-        grid-area: foto-9;
-    }
-    
-    .fotos-aus .galeria-1-viajes .img-10{
-        grid-area: foto-10;
-    }
+        object-fit: cover; } }
 
+/*Body - Contacto*/
+.body-contacto {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
 
-    /*FOOTER*/
-    footer h1, footer h2, footer h3{
-        margin: 0.75rem;
+.contacto-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .contacto-main .contacto-form {
+    color: #bfbfb8;
+    margin: 1.5rem 0.75rem 0rem 0.75rem;
+    text-align: center; }
+    .contacto-main .contacto-form fieldset legend {
+      font-size: 1rem;
+      font-weight: bold; }
+    .contacto-main .contacto-form fieldset .contacto-info {
+      font-size: 0.75rem;
+      margin: 0.5rem 0rem; }
+      .contacto-main .contacto-form fieldset .contacto-info input {
         font-size: 0.75rem;
-    }
+        margin: 0.5rem 0rem;
+        width: 100%;
+        padding-left: 0.25rem; }
+    .contacto-main .contacto-form fieldset .contacto-comentario input {
+      padding-bottom: 5rem; }
+    .contacto-main .contacto-form fieldset .contacto-info-botones input {
+      font-size: 0.75rem;
+      margin: 0.5rem;
+      width: 7.5rem;
+      border-radius: 1.5rem; }
+  .contacto-main img {
+    width: 95%;
+    margin: auto;
+    display: block;
+    padding: 1rem; }
 
-    .flecha-arriba{
-        width: 3rem;
-    }
-    
-}
+/*Media queries - Contacto*/
+@media screen and (min-width: 1024px) {
+  .contacto-main {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto; }
+    .contacto-main .contacto-form fieldset legend {
+      font-size: 1.25rem; }
+    .contacto-main .contacto-form fieldset .contacto-info {
+      font-size: 1rem; }
+      .contacto-main .contacto-form fieldset .contacto-info input {
+        font-size: 1rem;
+        margin: 0.75rem 0rem;
+        width: 75%;
+        padding-left: 0.25rem; }
+    .contacto-main .contacto-form fieldset .contacto-info-botones input {
+      font-size: 1rem;
+      margin: 0.75rem 0rem;
+      margin: 1rem;
+      width: 10rem;
+      border-radius: 1.5rem; } }
+
+/*MODIFICACIONES GENERALES BODY*/
+body {
+  background-color: #1e2d40;
+  font-family: 'Montserrat', sans-serif; }
+
+/*MODIFICACIONES GENERALES HEADER*/
+header nav div a .logo {
+  width: 6rem;
+  margin: 0.5rem 0rem 0.5rem 1rem; }
+
+header nav div div ul .logo-redes img {
+  width: 1.5rem; }
+
+header nav div div ul li a:hover {
+  color: #1e2d40 !important;
+  transform: scale(0.97);
+  transition: transform 0.3s; }
+
+header .color-nav {
+  background-color: rgba(85, 103, 115, 0.7); }
+
+/*MODIFICACIONES GENERALES FOOTER*/
+footer {
+  padding: 0.5rem;
+  color: #bfbfb8;
+  margin-top: auto; }
+  footer a .flecha-arriba {
+    width: 2rem;
+    margin-bottom: 0.25rem; }
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 1024px) {
+  /*HEADER*/
+  header nav div a .logo {
+    width: 9rem; }
+  header nav div div ul .logo-redes img {
+    width: 2rem; }
+  /*FOOTER*/
+  footer h1 {
+    margin: 0.75rem;
+    font-size: 0.75rem; }
+  footer h2 {
+    margin: 0.75rem;
+    font-size: 0.75rem; }
+  footer h3 {
+    margin: 0.75rem;
+    font-size: 0.75rem; }
+  footer a .flecha-arriba {
+    width: 3rem; } }

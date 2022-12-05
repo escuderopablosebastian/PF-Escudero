@@ -1,0 +1,190 @@
+/*Body - Eventos/trabajos*/
+.eventos-main{
+    width: 100%;
+    padding: 0.5rem 0.75rem 1rem 1rem;
+    h1{
+        background-color: $color-fondo-secundario;
+        color: $color-texto;
+        margin: 1rem 0rem 0.5rem 0rem;
+        font-size: $titulo-principal;
+        text-align: center;
+        padding: 2rem 0rem 2rem 0rem;
+        font-weight: bold;
+    }
+    .galeria-1{
+        img{
+            @include img;
+            padding-bottom: 0.5rem;
+        }
+    }
+    .galeria-eventos{
+        .evento-1{
+            &::before{
+                content: "Lucky Bay Brewing - Western Australia";
+                
+            }
+        }
+        .evento-2{
+            &::before{
+                content: "Esperance Community Arts";
+            }
+        }
+        .evento-3{
+            &::before{
+                content: "Esperance Wildflower Festival 2022";
+            }
+        }
+        .evento-4{
+            &::before{
+                content: "Kamal's Spanish Paella - Perth";
+            }
+        }
+        a{
+            position: relative;
+            img{
+                @include img;
+                padding: 0.5rem 0rem 0.5rem 0.5rem;
+            }
+            &::before{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 1rem;
+                @include flex-2;
+                background-color:  rgba(30, 45, 64, 0.6); 
+                color: whitesmoke;
+                font-size: $titulo-principal;
+            }
+        }
+    }
+    nav{
+        .eventos-menu{
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            li{
+                display: inline-block;
+                margin: 0.5rem 0rem 0.5rem 0rem;
+                padding: 0.5rem;
+                box-shadow: 1px 1px 2px black;
+                a{
+                    color: $color-texto;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: $parrafo;
+                }
+                &:hover{
+                    transform: scale(0.98);
+                    transition: transform 0.2s;
+                    box-shadow: -2px -2px 5px black;
+                }
+            }
+        }
+    }
+}
+
+/*Media Queries - Eventos*/
+@media screen and (min-width:1024px){
+    .eventos-main{
+        //Eventos-Principal
+        .galeria-eventos{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "evento-3 evento-2 evento-4"
+                "evento-3 evento-1 evento-1";
+            a{
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                img{
+                    padding: 0.5rem;
+                }
+                &::before{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color:  rgba(30, 45, 64, 0.6);
+                    transform: translate(100%);
+                    transition: transform 0.5s;
+                    color: whitesmoke;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: $titulo-principal-desktop;
+                }
+                &:hover{
+                    &::before{
+                        transform: translate(0);
+                    }
+                }
+            }
+            .evento-1{
+                grid-area: evento-1;
+                &::before{
+                    content: "Lucky Bay Brewing - Western Australia";
+                }
+            }
+            .evento-2{
+                grid-area: evento-2;
+                &::before{
+                    content: "Esperance Community Arts";
+                }
+            }
+            .evento-3{
+                grid-area: evento-3;
+                &::before{
+                    content: "Esperance Wildflower Festival 2022";
+                }
+            }
+            .evento-4{
+                grid-area: evento-4;
+                &::before{
+                    content: "Kamal's Spanish Paella - Perth";
+                }
+            }
+        }
+        //Eventos-Galerias
+        h1{
+            background-color: $color-fondo-secundario;
+            font-size: $titulo-principal-desktop;
+            text-align: center;
+            padding: 2rem 0rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        .galeria-1{
+            @include grid-galeria;
+        }
+        nav{
+            .eventos-menu{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                li{
+                    display: inline-block;
+                    margin: 1rem 0rem 1rem 0rem;
+                    padding: 1rem;
+                    &:hover{
+                        background-color: $color-fondo-secundario;
+                        transform: scale(0.98);
+                        transition: transform 0.2s;
+                        box-shadow: -2px -2px -5px black;
+                    }
+                    a{
+                        color: $color-texto;
+                        text-decoration: none;
+                        text-align: center;
+                        font-size: $parrafo-desktop;
+                    }
+                }
+            }
+        }
+    }
+
+}

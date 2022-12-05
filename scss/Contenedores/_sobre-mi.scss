@@ -1,0 +1,71 @@
+/*Body - Sobre Mi*/
+body{
+    .body-sobre-mi{
+        @include flex-1;
+    }
+}
+
+.sobre-mi-main{
+    margin: 0rem 0.5rem;
+    div{
+        color: $color-texto;
+        h1{
+            font-size: $titulo-principal;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        p{
+            font-size: $parrafo;
+            text-align: center;
+            margin: 0rem 0.75rem;
+            a{
+                text-decoration-line: none;
+                color: $color-texto;
+                font-weight: bolder;
+                &:hover{
+                    color: $color-fondo-secundario;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+    img{
+        width: 95%;
+        margin: auto;
+        display: block;
+        margin-top: 0.5rem;
+    }
+}
+
+/*Media Queries - Sobre-mi*/
+@media screen and (min-width:1024px){
+    .sobre-mi-main{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin: 1.5rem 0.75rem 0.75rem 0.5rem;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "img texto"
+            "img texto";
+        div{
+            grid-area: texto;
+            color: $color-texto;
+            h1{
+                font-size: 1.5rem;
+                text-align: left;
+            }
+            p{
+                font-size: 1rem;
+                text-align: left;
+                margin-left: 0;
+               
+            }
+        }
+    }
+
+
+}
+

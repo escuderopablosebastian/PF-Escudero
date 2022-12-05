@@ -1,0 +1,18 @@
+/*Body - Home*/
+body{
+    .home-body{
+        background-image: url(../img/Home/home.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        @include flex-1;
+    }
+}
+
+/*Footer - home*/
+.footer-home{
+    h1{
+        color: whitesmoke;
+    }
+}
