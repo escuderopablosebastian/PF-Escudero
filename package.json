@@ -1,7 +1,7 @@
 {
   "name": "proyecto-final",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pagina de trabajos y viajes fotograficos de Pablo Escudero",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/escuderopablosebastian/PreEntrega2-Escudero.git"
+    "url": "git+https://github.com/escuderopablosebastian/PreEntrega-3-Escudero.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/escuderopablosebastian/PreEntrega2-Escudero/issues"
+    "url": "https://github.com/escuderopablosebastian/PreEntrega-3-Escudero/issues"
   },
-  "homepage": "https://github.com/escuderopablosebastian/PreEntrega2-Escudero#readme",
+  "homepage": "https://github.com/escuderopablosebastian/PreEntrega-3-Escudero#readme",
   "devDependencies": {
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"
