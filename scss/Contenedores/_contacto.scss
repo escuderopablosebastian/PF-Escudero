@@ -55,7 +55,6 @@
 @media screen and (min-width:768px){
     .contacto-main{
         display: grid;
-        margin-top: 0;
         padding: 0.5rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -93,7 +92,6 @@
 }
 @media screen and (min-width:1024px){
     .contacto-main{
-        display: grid;
         grid-template-columns: 2fr 3fr;
         grid-template-rows: auto;
         .contacto-form{
