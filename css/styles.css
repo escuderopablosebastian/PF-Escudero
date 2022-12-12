@@ -49,37 +49,48 @@ body .body-sobre-mi {
         .sobre-mi-main div p a:hover {
           color: rgba(85, 103, 115, 0.7);
           transition: 0.2s; }
-  .sobre-mi-main img {
-    width: 95%;
-    margin: auto;
-    display: block;
-    margin-top: 0.5rem; }
+    .sobre-mi-main div img {
+      width: 95%;
+      margin: auto;
+      display: block;
+      margin-top: 0.5rem; }
 
 /*Media Queries - Sobre-mi*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .sobre-mi-main {
     display: grid;
     align-items: center;
     justify-content: center;
-    margin: 1.5rem 0.75rem 0.75rem 0.5rem;
-    grid-template-columns: 1fr 2fr;
+    padding: 0.5rem;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "img texto" "img texto"; }
+    grid-template-areas: "h1 img" "texto img"; }
     .sobre-mi-main div {
-      grid-area: texto;
       color: #bfbfb8; }
       .sobre-mi-main div h1 {
-        font-size: 1.5rem;
+        grid-area: h1;
+        font-size: 1rem;
         text-align: left; }
       .sobre-mi-main div p {
-        font-size: 1rem;
+        grid-area: texto;
+        font-size: 0.8rem;
         text-align: left;
-        margin-left: 0; } }
+        margin-left: 0; }
+      .sobre-mi-main div img {
+        grid-area: img; } }
+
+@media screen and (min-width: 1024px) {
+  .sobre-mi-main {
+    grid-template-columns: 5fr 3fr; }
+    .sobre-mi-main div h1 {
+      font-size: 1.25rem; }
+    .sobre-mi-main div p {
+      font-size: 1rem; } }
 
 /*Body - Eventos/trabajos*/
 .eventos-main {
   width: 100%;
-  padding: 0.5rem 0.75rem 1rem 1rem; }
+  padding: 0.5rem; }
   .eventos-main h1 {
     background-color: rgba(85, 103, 115, 0.7);
     color: #bfbfb8;
@@ -92,7 +103,7 @@ body .body-sobre-mi {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    padding-bottom: 0.5rem; }
+    margin-bottom: 0.5rem; }
   .eventos-main .galeria-eventos .evento-1::before {
     content: "Lucky Bay Brewing - Western Australia"; }
   .eventos-main .galeria-eventos .evento-2::before {
@@ -141,7 +152,7 @@ body .body-sobre-mi {
         box-shadow: -2px -2px 5px black; }
 
 /*Media Queries - Eventos*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .eventos-main .galeria-eventos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -152,7 +163,7 @@ body .body-sobre-mi {
       cursor: pointer;
       overflow: hidden; }
       .eventos-main .galeria-eventos a img {
-        padding: 0.5rem; }
+        padding: 0.25rem; }
       .eventos-main .galeria-eventos a::before {
         position: absolute;
         top: 0;
@@ -166,7 +177,8 @@ body .body-sobre-mi {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.25rem; }
+        text-align: center;
+        font-size: 1rem; }
       .eventos-main .galeria-eventos a:hover::before {
         transform: translate(0); }
     .eventos-main .galeria-eventos .evento-1 {
@@ -186,12 +198,7 @@ body .body-sobre-mi {
       .eventos-main .galeria-eventos .evento-4::before {
         content: "Kamal's Spanish Paella - Perth"; }
   .eventos-main h1 {
-    background-color: rgba(85, 103, 115, 0.7);
-    font-size: 1.25rem;
-    text-align: center;
-    padding: 2rem 0rem;
-    font-weight: bold;
-    margin-right: 0.5rem; }
+    font-size: 1rem; }
   .eventos-main .galeria-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -220,38 +227,64 @@ body .body-sobre-mi {
     .eventos-main .galeria-1 .img-10 {
       grid-area: foto-10; }
   .eventos-main nav .eventos-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "ev-3 ev-2" "ev-4 ev-1";
+    padding-right: 3rem; }
+    .eventos-main nav .eventos-menu .ev-1 {
+      grid-area: ev-1; }
+    .eventos-main nav .eventos-menu .ev-2 {
+      grid-area: ev-2; }
+    .eventos-main nav .eventos-menu .ev-3 {
+      grid-area: ev-3; }
+    .eventos-main nav .eventos-menu .ev-4 {
+      grid-area: ev-4; }
     .eventos-main nav .eventos-menu li {
-      display: inline-block;
-      margin: 1rem 0rem 1rem 0rem;
-      padding: 1rem; }
+      margin: 0.5rem 0rem 0.25rem;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold; }
       .eventos-main nav .eventos-menu li:hover {
         background-color: rgba(85, 103, 115, 0.7);
         transform: scale(0.98);
         transition: transform 0.2s;
-        box-shadow: -2px -2px -5px black; }
+        box-shadow: -2px -2px 5px black; }
       .eventos-main nav .eventos-menu li a {
         color: #bfbfb8;
         text-decoration: none;
-        text-align: center;
+        font-size: 1rem; } }
+
+@media screen and (min-width: 1024px) {
+  .eventos-main .galeria-eventos a img {
+    padding: 0.5rem; }
+  .eventos-main .galeria-eventos a::before {
+    font-size: 1.25rem; }
+  .eventos-main h1 {
+    font-size: 1.25rem; }
+  .eventos-main nav .eventos-menu {
+    display: flex;
+    flex-direction: row; }
+    .eventos-main nav .eventos-menu li {
+      margin: 1rem 0rem 1rem 0rem; }
+      .eventos-main nav .eventos-menu li a {
         font-size: 1rem; } }
 
 /*Body - Viajes*/
 .viajes-main div {
-  color: #bfbfb8;
-  margin-top: 0.25rem; }
+  color: #bfbfb8; }
   .viajes-main div h1 {
     font-size: 1rem;
     text-align: center;
     font-weight: bold;
-    margin-top: 1rem; }
+    padding-top: 1rem; }
   .viajes-main div p {
     font-size: 0.75rem;
-    margin: 0rem 0.75rem; }
+    margin: 0rem 1rem; }
   .viajes-main div .carousel-viajes {
-    padding: 0.5rem 0.75rem; }
+    padding: 0.5rem 1rem; }
 
 .viajes-main .fotos-aus {
   padding-right: 0.5rem;
@@ -268,71 +301,79 @@ body .body-sobre-mi {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    padding: 0.25rem; }
+    margin-bottom: 0.5rem; }
 
 /*Media Queries - Viajes*/
-@media screen and (min-width: 1024px) {
-  .viajes-main .viaje-australia {
-    color: #bfbfb8;
-    margin: 0.5rem 0rem 0.75rem 0rem;
-    display: grid;
-    padding: 0rem 1rem 3rem 1rem;
-    grid-gap: 0.5rem;
-    align-items: center;
-    align-content: center;
-    grid-template-columns: 3fr 4fr;
-    grid-template-rows: auto;
-    grid-template-areas: "texto carousel" "texto carousel"; }
-    .viajes-main .viaje-australia .australia-texto {
-      grid-area: texto; }
-      .viajes-main .viaje-australia .australia-texto h1 {
-        font-size: 1.25rem; }
-      .viajes-main .viaje-australia .australia-texto p {
-        font-size: 1rem; }
-    .viajes-main .viaje-australia .carousel-viajes {
-      grid-area: carousel;
-      margin: auto; }
-  .viajes-main .fotos-aus {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
-    .viajes-main .fotos-aus div h2 {
-      background-color: rgba(85, 103, 115, 0.7);
-      font-size: 1.25rem;
-      text-align: center;
-      margin-right: 0.75rem;
-      padding: 2rem 0rem;
-      font-weight: bold; }
-    .viajes-main .fotos-aus .galeria-1-viajes {
+@media screen and (min-width: 768px) {
+  .viajes-main {
+    padding: 0.5rem; }
+    .viajes-main .viaje-australia {
+      color: #bfbfb8;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
       gap: 0.5rem;
+      align-items: center;
+      align-content: center;
+      grid-template-columns: 3fr 4fr;
+      grid-template-rows: auto;
+      grid-template-areas: "texto carousel" "texto carousel"; }
+      .viajes-main .viaje-australia .australia-texto {
+        grid-area: texto; }
+        .viajes-main .viaje-australia .australia-texto h1 {
+          font-size: 1rem; }
+        .viajes-main .viaje-australia .australia-texto p {
+          font-size: 0.8rem; }
+      .viajes-main .viaje-australia .carousel-viajes {
+        grid-area: carousel;
+        margin: auto; }
+    .viajes-main .fotos-aus {
       padding-right: 0.5rem;
-      grid-template-areas: "foto-2 foto-3 foto-4" "foto-2 foto-1 foto-1" "foto-5 foto-5 foto-6" "foto-5 foto-5 foto-6" "foto-7 foto-7 foto-8" "foto-9 foto-10 foto-8"; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-1 {
-        grid-area: foto-1; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-2 {
-        grid-area: foto-2; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-3 {
-        grid-area: foto-3; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-4 {
-        grid-area: foto-4; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-5 {
-        grid-area: foto-5; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-6 {
-        grid-area: foto-6; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-7 {
-        grid-area: foto-7; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-8 {
-        grid-area: foto-8; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-9 {
-        grid-area: foto-9; }
-      .viajes-main .fotos-aus .galeria-1-viajes .img-10 {
-        grid-area: foto-10; }
-      .viajes-main .fotos-aus .galeria-1-viajes img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; } }
+      padding-left: 0.5rem; }
+      .viajes-main .fotos-aus div h2 {
+        background-color: rgba(85, 103, 115, 0.7);
+        font-size: 1rem;
+        text-align: center;
+        margin-right: 0.5rem;
+        padding: 2rem 0rem;
+        font-weight: bold; }
+      .viajes-main .fotos-aus .galeria-1-viajes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0.5rem;
+        padding-right: 0.5rem;
+        grid-template-areas: "foto-2 foto-3 foto-4" "foto-2 foto-1 foto-1" "foto-5 foto-5 foto-6" "foto-5 foto-5 foto-6" "foto-7 foto-7 foto-8" "foto-9 foto-10 foto-8"; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-1 {
+          grid-area: foto-1; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-2 {
+          grid-area: foto-2; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-3 {
+          grid-area: foto-3; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-4 {
+          grid-area: foto-4; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-5 {
+          grid-area: foto-5; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-6 {
+          grid-area: foto-6; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-7 {
+          grid-area: foto-7; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-8 {
+          grid-area: foto-8; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-9 {
+          grid-area: foto-9; }
+        .viajes-main .fotos-aus .galeria-1-viajes .img-10 {
+          grid-area: foto-10; }
+        .viajes-main .fotos-aus .galeria-1-viajes img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; } }
+
+@media screen and (min-width: 1024px) {
+  .viajes-main .viaje-australia .australia-texto h1 {
+    font-size: 1.25rem; }
+  .viajes-main .viaje-australia .australia-texto p {
+    font-size: 1rem; }
+  .viajes-main .fotos-aus div h2 {
+    font-size: 1.25rem; } }
 
 /*Body - Contacto*/
 .body-contacto {
@@ -344,10 +385,11 @@ body .body-sobre-mi {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 0.5rem; }
   .contacto-main .contacto-form {
     color: #bfbfb8;
-    margin: 1.5rem 0.75rem 0rem 0.75rem;
+    margin: 0.5rem;
     text-align: center; }
     .contacto-main .contacto-form fieldset legend {
       font-size: 1rem;
@@ -368,12 +410,37 @@ body .body-sobre-mi {
       width: 7.5rem;
       border-radius: 1.5rem; }
   .contacto-main img {
-    width: 95%;
+    width: 80%;
     margin: auto;
     display: block;
-    padding: 1rem; }
+    padding: 0.5rem; }
 
 /*Media queries - Contacto*/
+@media screen and (min-width: 768px) {
+  .contacto-main {
+    display: grid;
+    margin-top: 0;
+    padding: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto; }
+    .contacto-main .contacto-form fieldset legend {
+      font-size: 1rem; }
+    .contacto-main .contacto-form fieldset .contacto-info {
+      font-size: 0.8rem; }
+      .contacto-main .contacto-form fieldset .contacto-info input {
+        font-size: 0.8rem;
+        margin: 0.75rem 0rem;
+        width: 90%;
+        padding-left: 0.25rem; }
+    .contacto-main .contacto-form fieldset .contacto-info-botones input {
+      font-size: 0.8rem;
+      margin: 0.75rem 0rem;
+      margin: 1rem;
+      width: 7.5rem;
+      border-radius: 1.5rem; }
+    .contacto-main img {
+      width: 100%; } }
+
 @media screen and (min-width: 1024px) {
   .contacto-main {
     display: grid;
@@ -386,8 +453,8 @@ body .body-sobre-mi {
       .contacto-main .contacto-form fieldset .contacto-info input {
         font-size: 1rem;
         margin: 0.75rem 0rem;
-        width: 75%;
-        padding-left: 0.25rem; }
+        width: 90%;
+        padding-left: 0.5rem; }
     .contacto-main .contacto-form fieldset .contacto-info-botones input {
       font-size: 1rem;
       margin: 0.75rem 0rem;
@@ -426,6 +493,25 @@ footer {
     margin-bottom: 0.25rem; }
 
 /*MEDIA QUERIES*/
+@media screen and (min-width: 768px) {
+  /*HEADER*/
+  header nav div a .logo {
+    width: 7.5rem; }
+  header nav div div ul .logo-redes img {
+    width: 1.75rem; }
+  /*FOOTER*/
+  footer h1 {
+    margin: 0.75rem;
+    font-size: 0.6rem; }
+  footer h2 {
+    margin: 0.75rem;
+    font-size: 0.6rem; }
+  footer h3 {
+    margin: 0.75rem;
+    font-size: 0.6rem; }
+  footer a .flecha-arriba {
+    width: 2.5rem; } }
+
 @media screen and (min-width: 1024px) {
   /*HEADER*/
   header nav div a .logo {
@@ -434,13 +520,10 @@ footer {
     width: 2rem; }
   /*FOOTER*/
   footer h1 {
-    margin: 0.75rem;
     font-size: 0.75rem; }
   footer h2 {
-    margin: 0.75rem;
     font-size: 0.75rem; }
   footer h3 {
-    margin: 0.75rem;
     font-size: 0.75rem; }
   footer a .flecha-arriba {
     width: 3rem; } }

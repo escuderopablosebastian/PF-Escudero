@@ -2,19 +2,18 @@
 .viajes-main{
     div{
         color: $color-texto;
-        margin-top: 0.25rem;
         h1{
             font-size: $titulo-principal;
             text-align: center;
             font-weight: bold;
-            margin-top: 1rem;
+            padding-top: 1rem;
         }
         p{
             font-size: $parrafo;
-            margin: 0rem 0.75rem;
+            margin: 0rem 1rem;
         }
         .carousel-viajes{
-            padding: 0.5rem 0.75rem;
+            padding: 0.5rem 1rem;
         }
     }
     .fotos-aus{
@@ -34,7 +33,7 @@
         .galeria-1-viajes{
             img{
                 @include img;
-                padding: 0.25rem;
+                margin-bottom: 0.5rem;
             }
         }
         
@@ -42,14 +41,13 @@
 }
 
 /*Media Queries - Viajes*/
-@media screen and (min-width:1024px){    
+@media screen and (min-width:768px){    
     .viajes-main {
+        padding: 0.5rem;
         .viaje-australia{
             color: $color-texto;
-            margin: 0.5rem 0rem 0.75rem 0rem;
             display: grid;
-            padding: 0rem 1rem 3rem 1rem;
-            grid-gap: 0.5rem;
+            gap: 0.5rem;
             align-items: center;
             align-content: center;
             grid-template-columns: 3fr 4fr;
@@ -60,10 +58,10 @@
             .australia-texto{
                 grid-area: texto;
                 h1{
-                    font-size: $titulo-principal-desktop;
+                    font-size: $titulo-principal-tablet;
                 }
                 p{
-                    font-size: $parrafo-desktop;
+                    font-size: $parrafo-tablet;
                 }
             }
             .carousel-viajes{
@@ -77,9 +75,9 @@
             div{
                 h2{
                     background-color: $color-fondo-secundario;
-                    font-size: $titulo-principal-desktop;
+                    font-size: $titulo-principal-tablet;
                     text-align: center;
-                    margin-right: 0.75rem;
+                    margin-right: 0.5rem;
                     padding: 2rem 0rem;
                     font-weight: bold;
                 }
@@ -90,7 +88,27 @@
                     @include img;
                 }
             }
-
+        }
+    }
+}
+@media screen and (min-width:1024px){    
+    .viajes-main {
+        .viaje-australia{
+            .australia-texto{
+                h1{
+                    font-size: $titulo-principal-desktop;
+                }
+                p{
+                    font-size: $parrafo-desktop;
+                }
+            }
+        }
+        .fotos-aus{
+            div{
+                h2{
+                    font-size: $titulo-principal-desktop;
+                }
+            }
         }
     }
 }

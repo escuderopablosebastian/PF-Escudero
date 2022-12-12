@@ -29,43 +29,58 @@ body{
                 }
             }
         }
-    }
-    img{
-        width: 95%;
-        margin: auto;
-        display: block;
-        margin-top: 0.5rem;
+        img{
+            width: 95%;
+            margin: auto;
+            display: block;
+            margin-top: 0.5rem;
+        }
     }
 }
 
 /*Media Queries - Sobre-mi*/
-@media screen and (min-width:1024px){
+@media screen and (min-width: 768px){
     .sobre-mi-main{
         display: grid;
         align-items: center;
         justify-content: center;
-        margin: 1.5rem 0.75rem 0.75rem 0.5rem;
-        grid-template-columns: 1fr 2fr;
+        padding: 0.5rem;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
-            "img texto"
-            "img texto";
+            "h1 img"
+            "texto img";
         div{
-            grid-area: texto;
             color: $color-texto;
             h1{
-                font-size: 1.5rem;
+                grid-area: h1;
+                font-size: $titulo-principal-tablet;
                 text-align: left;
             }
             p{
-                font-size: 1rem;
+                grid-area: texto;
+                font-size: $parrafo-tablet;
                 text-align: left;
-                margin-left: 0;
-               
+                margin-left: 0;  
+            }
+            img{
+                grid-area: img;
             }
         }
     }
+}
 
-
+@media screen and (min-width:1024px){
+    .sobre-mi-main{
+        grid-template-columns: 5fr 3fr;
+        div{
+            h1{
+                font-size: $titulo-principal-desktop;    
+            }
+            p{
+                font-size: $parrafo-desktop;    
+            }
+        }
+    }
 }
 

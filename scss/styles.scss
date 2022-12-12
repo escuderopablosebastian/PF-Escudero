@@ -80,6 +80,52 @@ footer{
 }
 
 /*MEDIA QUERIES*/
+@media screen and (min-width: 768px){
+    /*HEADER*/
+    header{
+        nav{
+            div{
+                a{
+                    .logo{
+                        width: 7.5rem;
+                    }
+                }
+                div{
+                    ul{
+                        .logo-redes{
+                            img{
+                                width: $ancho-redes-tablet;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*FOOTER*/
+    footer{
+        
+        h1{
+            margin: 0.75rem;
+            font-size: $texto-footer-tablet;
+        }
+        h2{
+            margin: 0.75rem;
+            font-size: $texto-footer-tablet;
+        }
+        h3{
+            margin: 0.75rem;
+            font-size: $texto-footer-tablet;
+        }
+        a{
+            .flecha-arriba{
+                width: 2.5rem;
+            }
+        }
+    }
+
+}
 @media screen and (min-width: 1024px){
     /*HEADER*/
     header{
@@ -107,15 +153,12 @@ footer{
     footer{
         
         h1{
-            margin: 0.75rem;
             font-size: $texto-footer-desktop;
         }
         h2{
-            margin: 0.75rem;
             font-size: $texto-footer-desktop;
         }
         h3{
-            margin: 0.75rem;
             font-size: $texto-footer-desktop;
         }
         a{

@@ -8,9 +8,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0.5rem;
     .contacto-form{
         color: $color-texto;
-        margin: 1.5rem 0.75rem 0rem 0.75rem;
+        margin: 0.5rem;
         text-align: center;
         fieldset{
             legend{
@@ -43,14 +44,53 @@
         }
     }
     img{
-        width: 95%;
+        width: 80%;
         margin: auto;
         display: block;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 }
 
 /*Media queries - Contacto*/
+@media screen and (min-width:768px){
+    .contacto-main{
+        display: grid;
+        margin-top: 0;
+        padding: 0.5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        .contacto-form{
+            fieldset{
+                legend{
+                    font-size: $titulo-principal-tablet;
+                }
+                .contacto-info{
+                    font-size: $parrafo-tablet;
+                    input{
+                        font-size: $parrafo-tablet;
+                        margin: 0.75rem 0rem;
+                        width: 90%;
+                        padding-left: 0.25rem;
+                    }
+                }
+                .contacto-info-botones{
+                    input{
+                        font-size: $parrafo-tablet;
+                        margin: 0.75rem 0rem;
+                        margin: 1rem;
+                        width: 7.5rem;
+                        border-radius: 1.5rem;
+                    }
+                    
+                }
+            }
+        }
+        img{
+            width: 100%;
+            
+        }
+    }
+}
 @media screen and (min-width:1024px){
     .contacto-main{
         display: grid;
@@ -66,8 +106,8 @@
                     input{
                         font-size: $parrafo-desktop;
                         margin: 0.75rem 0rem;
-                        width: 75%;
-                        padding-left: 0.25rem;
+                        width: 90%;
+                        padding-left: 0.5rem;
                     }
                 }
                 .contacto-info-botones{
