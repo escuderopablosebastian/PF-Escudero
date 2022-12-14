@@ -1,15 +1,10 @@
 /*Body - Eventos/trabajos*/
 .eventos-main{
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     h1{
-        background-color: $color-fondo-secundario;
+        @extend %titulos-con-fondo;
         color: $color-texto;
-        margin: 1rem 0rem 0.5rem 0rem;
-        font-size: $titulo-principal;
-        text-align: center;
-        padding: 2rem 0rem 2rem 0rem;
-        font-weight: bold;
     }
     .galeria-1{
         img{

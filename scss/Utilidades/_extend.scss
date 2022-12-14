@@ -5,3 +5,32 @@
     font-size: $texto-footer;
 }
 
+//Parrafos
+%parrafos{
+    font-size: $parrafo;
+    padding-bottom: 1.5rem;
+    margin: 0rem 1rem;
+    text-align: center;
+}
+
+//Titulos
+%titulos{
+    font-size: $titulo-principal;
+    padding: 1rem 0rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+%titulos-con-fondo{
+    background-color: $color-fondo-secundario;
+    font-size: $titulo-principal;
+    text-align: center;
+    padding: 2rem 0rem;
+    font-weight: bold;
+}
+
+//Margin
+%margin-mobile{
+    margin: 0rem 1rem;
+}
+

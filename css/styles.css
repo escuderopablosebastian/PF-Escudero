@@ -8,6 +8,28 @@ footer h1, footer h2, footer h3 {
   margin: 0.25rem;
   font-size: 0.5rem; }
 
+.sobre-mi-main div p, .viajes-main div p {
+  font-size: 0.75rem;
+  padding-bottom: 1.5rem;
+  margin: 0rem 1rem;
+  text-align: center; }
+
+.sobre-mi-main div h1, .viajes-main div h1 {
+  font-size: 1rem;
+  padding: 1rem 0rem;
+  text-align: center;
+  font-weight: bold; }
+
+.eventos-main h1, .viajes-main .fotos-aus div h2 {
+  background-color: rgba(85, 103, 115, 0.7);
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem 0rem;
+  font-weight: bold; }
+
+.sobre-mi-main {
+  margin: 0rem 1rem; }
+
 /*Body - Home*/
 body .home-body {
   background-image: url(../img/Home/home.jpg);
@@ -29,31 +51,20 @@ body .body-sobre-mi {
   flex-direction: column;
   min-height: 100vh; }
 
-.sobre-mi-main {
-  margin: 0rem 0.5rem; }
-  .sobre-mi-main div {
-    color: #bfbfb8; }
-    .sobre-mi-main div h1 {
-      font-size: 1rem;
-      text-align: center;
-      font-weight: bold;
-      margin-top: 1rem; }
-    .sobre-mi-main div p {
-      font-size: 0.75rem;
-      text-align: center;
-      margin: 0rem 0.75rem; }
-      .sobre-mi-main div p a {
-        text-decoration-line: none;
-        color: #bfbfb8;
-        font-weight: bolder; }
-        .sobre-mi-main div p a:hover {
-          color: rgba(85, 103, 115, 0.7);
-          transition: 0.2s; }
-    .sobre-mi-main div img {
-      width: 95%;
-      margin: auto;
-      display: block;
-      margin-top: 0.5rem; }
+.sobre-mi-main div {
+  color: #bfbfb8; }
+  .sobre-mi-main div p a {
+    text-decoration-line: none;
+    color: #bfbfb8;
+    font-weight: bolder; }
+    .sobre-mi-main div p a:hover {
+      color: rgba(85, 103, 115, 0.7);
+      transition: 0.2s; }
+  .sobre-mi-main div img {
+    width: 95%;
+    margin: auto;
+    display: block;
+    margin-top: 0.5rem; }
 
 /*Media Queries - Sobre-mi*/
 @media screen and (min-width: 768px) {
@@ -61,7 +72,7 @@ body .body-sobre-mi {
     display: grid;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem;
+    margin: 0.5rem 1rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "h1 img" "texto img"; }
@@ -69,8 +80,7 @@ body .body-sobre-mi {
       color: #bfbfb8; }
       .sobre-mi-main div h1 {
         grid-area: h1;
-        font-size: 1rem;
-        text-align: left; }
+        font-size: 1rem; }
       .sobre-mi-main div p {
         grid-area: texto;
         font-size: 0.8rem;
@@ -90,15 +100,9 @@ body .body-sobre-mi {
 /*Body - Eventos/trabajos*/
 .eventos-main {
   width: 100%;
-  padding: 0.5rem; }
+  padding: 1rem; }
   .eventos-main h1 {
-    background-color: rgba(85, 103, 115, 0.7);
-    color: #bfbfb8;
-    margin: 1rem 0rem 0.5rem 0rem;
-    font-size: 1rem;
-    text-align: center;
-    padding: 2rem 0rem 2rem 0rem;
-    font-weight: bold; }
+    color: #bfbfb8; }
   .eventos-main .galeria-1 img {
     width: 100%;
     height: 100%;
@@ -273,30 +277,12 @@ body .body-sobre-mi {
         font-size: 1rem; } }
 
 /*Body - Viajes*/
-.viajes-main div {
-  color: #bfbfb8; }
-  .viajes-main div h1 {
-    font-size: 1rem;
-    text-align: center;
-    font-weight: bold;
-    padding-top: 1rem; }
-  .viajes-main div p {
-    font-size: 0.75rem;
-    margin: 0rem 1rem; }
-  .viajes-main div .carousel-viajes {
-    padding: 0.5rem 1rem; }
-
-.viajes-main .fotos-aus {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem; }
-  .viajes-main .fotos-aus div h2 {
-    background-color: rgba(85, 103, 115, 0.7);
-    font-size: 1rem;
-    text-align: center;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    padding: 2rem 0rem;
-    font-weight: bold; }
+.viajes-main {
+  margin: 0rem 1rem; }
+  .viajes-main div {
+    color: #bfbfb8; }
+    .viajes-main div .carousel-viajes {
+      margin-bottom: 0.5rem; }
   .viajes-main .fotos-aus .galeria-1-viajes img {
     width: 100%;
     height: 100%;
@@ -306,14 +292,14 @@ body .body-sobre-mi {
 /*Media Queries - Viajes*/
 @media screen and (min-width: 768px) {
   .viajes-main {
-    padding: 0.5rem; }
+    padding-top: 0.5rem; }
     .viajes-main .viaje-australia {
       color: #bfbfb8;
       display: grid;
       gap: 0.5rem;
       align-items: center;
       align-content: center;
-      grid-template-columns: 3fr 4fr;
+      grid-template-columns: 1.1fr 1fr;
       grid-template-rows: auto;
       grid-template-areas: "texto carousel" "texto carousel"; }
       .viajes-main .viaje-australia .australia-texto {
@@ -321,51 +307,52 @@ body .body-sobre-mi {
         .viajes-main .viaje-australia .australia-texto h1 {
           font-size: 1rem; }
         .viajes-main .viaje-australia .australia-texto p {
-          font-size: 0.8rem; }
+          font-size: 0.8rem;
+          text-align: left;
+          margin-left: 0;
+          margin-right: 0; }
       .viajes-main .viaje-australia .carousel-viajes {
         grid-area: carousel;
-        margin: auto; }
-    .viajes-main .fotos-aus {
+        margin: auto;
+        padding-right: 0.5rem; }
+    .viajes-main .fotos-aus div h2 {
+      background-color: rgba(85, 103, 115, 0.7);
+      font-size: 1rem;
+      text-align: center;
+      margin-right: 0.5rem;
+      padding: 2rem 0rem;
+      font-weight: bold; }
+    .viajes-main .fotos-aus .galeria-1-viajes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 0.5rem;
       padding-right: 0.5rem;
-      padding-left: 0.5rem; }
-      .viajes-main .fotos-aus div h2 {
-        background-color: rgba(85, 103, 115, 0.7);
-        font-size: 1rem;
-        text-align: center;
-        margin-right: 0.5rem;
-        padding: 2rem 0rem;
-        font-weight: bold; }
-      .viajes-main .fotos-aus .galeria-1-viajes {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 0.5rem;
-        padding-right: 0.5rem;
-        grid-template-areas: "foto-2 foto-3 foto-4" "foto-2 foto-1 foto-1" "foto-5 foto-5 foto-6" "foto-5 foto-5 foto-6" "foto-7 foto-7 foto-8" "foto-9 foto-10 foto-8"; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-1 {
-          grid-area: foto-1; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-2 {
-          grid-area: foto-2; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-3 {
-          grid-area: foto-3; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-4 {
-          grid-area: foto-4; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-5 {
-          grid-area: foto-5; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-6 {
-          grid-area: foto-6; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-7 {
-          grid-area: foto-7; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-8 {
-          grid-area: foto-8; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-9 {
-          grid-area: foto-9; }
-        .viajes-main .fotos-aus .galeria-1-viajes .img-10 {
-          grid-area: foto-10; }
-        .viajes-main .fotos-aus .galeria-1-viajes img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; } }
+      grid-template-areas: "foto-2 foto-3 foto-4" "foto-2 foto-1 foto-1" "foto-5 foto-5 foto-6" "foto-5 foto-5 foto-6" "foto-7 foto-7 foto-8" "foto-9 foto-10 foto-8"; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-1 {
+        grid-area: foto-1; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-2 {
+        grid-area: foto-2; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-3 {
+        grid-area: foto-3; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-4 {
+        grid-area: foto-4; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-5 {
+        grid-area: foto-5; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-6 {
+        grid-area: foto-6; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-7 {
+        grid-area: foto-7; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-8 {
+        grid-area: foto-8; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-9 {
+        grid-area: foto-9; }
+      .viajes-main .fotos-aus .galeria-1-viajes .img-10 {
+        grid-area: foto-10; }
+      .viajes-main .fotos-aus .galeria-1-viajes img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; } }
 
 @media screen and (min-width: 1024px) {
   .viajes-main .viaje-australia .australia-texto h1 {
@@ -389,7 +376,7 @@ body .body-sobre-mi {
   margin-top: 0.5rem; }
   .contacto-main .contacto-form {
     color: #bfbfb8;
-    margin: 0.5rem;
+    margin-top: 0.5rem;
     text-align: center; }
     .contacto-main .contacto-form fieldset legend {
       font-size: 1rem;

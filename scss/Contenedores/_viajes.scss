@@ -1,33 +1,23 @@
 /*Body - Viajes*/
 .viajes-main{
+    margin: 0rem 1rem;
     div{
         color: $color-texto;
         h1{
-            font-size: $titulo-principal;
-            text-align: center;
-            font-weight: bold;
-            padding-top: 1rem;
+            @extend %titulos;
         }
         p{
-            font-size: $parrafo;
-            margin: 0rem 1rem;
+            @extend %parrafos;
+            
         }
         .carousel-viajes{
-            padding: 0.5rem 1rem;
+            margin-bottom: 0.5rem;
         }
     }
     .fotos-aus{
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
         div{
             h2{
-                background-color: $color-fondo-secundario;
-                font-size: $titulo-principal;
-                text-align: center;
-                margin-left: 0.25rem;
-                margin-right: 0.25rem;
-                padding: 2rem 0rem;
-                font-weight: bold;
+                @extend %titulos-con-fondo;
             }
         }
         .galeria-1-viajes{
@@ -43,14 +33,14 @@
 /*Media Queries - Viajes*/
 @media screen and (min-width:768px){    
     .viajes-main {
-        padding: 0.5rem;
+        padding-top: 0.5rem;
         .viaje-australia{
             color: $color-texto;
             display: grid;
             gap: 0.5rem;
             align-items: center;
             align-content: center;
-            grid-template-columns: 3fr 4fr;
+            grid-template-columns: 1.1fr 1fr;
             grid-template-rows: auto;
             grid-template-areas: 
                 "texto carousel"
@@ -62,16 +52,18 @@
                 }
                 p{
                     font-size: $parrafo-tablet;
+                    text-align: left;
+                    margin-left: 0;
+                    margin-right: 0;
                 }
             }
             .carousel-viajes{
                 grid-area: carousel;
                 margin: auto;
+                padding-right: 0.5rem;
             }
         }
         .fotos-aus{
-            padding-right: 0.5rem;
-            padding-left: 0.5rem;
             div{
                 h2{
                     background-color: $color-fondo-secundario;

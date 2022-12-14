@@ -6,19 +6,14 @@ body{
 }
 
 .sobre-mi-main{
-    margin: 0rem 0.5rem;
+    @extend %margin-mobile;
     div{
         color: $color-texto;
         h1{
-            font-size: $titulo-principal;
-            text-align: center;
-            font-weight: bold;
-            margin-top: 1rem;
+            @extend %titulos;
         }
         p{
-            font-size: $parrafo;
-            text-align: center;
-            margin: 0rem 0.75rem;
+            @extend %parrafos;
             a{
                 text-decoration-line: none;
                 color: $color-texto;
@@ -44,7 +39,7 @@ body{
         display: grid;
         align-items: center;
         justify-content: center;
-        padding: 0.5rem;
+        margin: 0.5rem 1rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
@@ -55,7 +50,7 @@ body{
             h1{
                 grid-area: h1;
                 font-size: $titulo-principal-tablet;
-                text-align: left;
+                
             }
             p{
                 grid-area: texto;
