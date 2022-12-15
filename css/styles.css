@@ -422,7 +422,7 @@ body .body-sobre-mi {
       .contacto-main .contacto-form fieldset .contacto-info input {
         font-size: 0.8rem;
         margin: 0.75rem 0rem;
-        width: 90%;
+        max-width: 20rem;
         padding-left: 0.25rem; }
     .contacto-main .contacto-form fieldset .contacto-info-botones input {
       font-size: 0.8rem;
@@ -444,7 +444,7 @@ body .body-sobre-mi {
       .contacto-main .contacto-form fieldset .contacto-info input {
         font-size: 1rem;
         margin: 0.75rem 0rem;
-        width: 90%;
+        max-width: 24rem;
         padding-left: 0.5rem; }
     .contacto-main .contacto-form fieldset .contacto-info-botones input {
       font-size: 1rem;

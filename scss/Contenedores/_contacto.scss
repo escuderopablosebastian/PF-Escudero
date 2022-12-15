@@ -70,7 +70,7 @@
                     input{
                         font-size: $parrafo-tablet;
                         margin: 0.75rem 0rem;
-                        width: 90%;
+                        max-width: 20rem;
                         padding-left: 0.25rem;
                     }
                 }
@@ -106,7 +106,7 @@
                     input{
                         font-size: $parrafo-desktop;
                         margin: 0.75rem 0rem;
-                        width: 90%;
+                        max-width: 24rem;
                         padding-left: 0.5rem;
                     }
                 }
