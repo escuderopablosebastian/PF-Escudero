@@ -29,8 +29,10 @@
                 }
             }
             .contacto-comentario{
-                input{
-                    padding-bottom: 5rem;                    
+                textarea{
+                    padding-bottom: 5rem;
+                    padding-left: 0.25rem;
+                    resize: none;                    
                 }
             }
             .contacto-info-botones{

@@ -10,9 +10,10 @@ footer h1, footer h2, footer h3 {
 
 .sobre-mi-main div p, .viajes-main div p {
   font-size: 0.75rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   margin: 0rem 1rem;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 0.6px; }
 
 .sobre-mi-main div h1, .viajes-main div h1 {
   font-size: 1rem;
@@ -73,7 +74,7 @@ body .body-sobre-mi {
     align-items: center;
     justify-content: center;
     margin: 0.5rem 1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "h1 img" "texto img"; }
     .sobre-mi-main div {
@@ -202,7 +203,8 @@ body .body-sobre-mi {
       .eventos-main .galeria-eventos .evento-4::before {
         content: "Kamal's Spanish Paella - Perth"; }
   .eventos-main h1 {
-    font-size: 1rem; }
+    font-size: 1rem;
+    margin-right: 0.5rem; }
   .eventos-main .galeria-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -360,7 +362,8 @@ body .body-sobre-mi {
   .viajes-main .viaje-australia .australia-texto p {
     font-size: 1rem; }
   .viajes-main .fotos-aus div h2 {
-    font-size: 1.25rem; } }
+    font-size: 1.25rem;
+    margin-top: 0.5rem; } }
 
 /*Body - Contacto*/
 .body-contacto {
@@ -389,8 +392,10 @@ body .body-sobre-mi {
         margin: 0.5rem 0rem;
         width: 100%;
         padding-left: 0.25rem; }
-    .contacto-main .contacto-form fieldset .contacto-comentario input {
-      padding-bottom: 5rem; }
+    .contacto-main .contacto-form fieldset .contacto-comentario textarea {
+      padding-bottom: 5rem;
+      padding-left: 0.25rem;
+      resize: none; }
     .contacto-main .contacto-form fieldset .contacto-info-botones input {
       font-size: 0.75rem;
       margin: 0.5rem;

@@ -148,6 +148,7 @@
         //Eventos-Galerias
         h1{
             font-size: $titulo-principal-tablet;
+            margin-right: 0.5rem;
         }
         .galeria-1{
             @include grid-galeria;

@@ -40,7 +40,7 @@ body{
         align-items: center;
         justify-content: center;
         margin: 0.5rem 1rem;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
             "h1 img"
@@ -56,7 +56,8 @@ body{
                 grid-area: texto;
                 font-size: $parrafo-tablet;
                 text-align: left;
-                margin-left: 0;  
+                margin-left: 0;
+                  
             }
             img{
                 grid-area: img;
