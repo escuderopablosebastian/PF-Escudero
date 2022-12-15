@@ -307,7 +307,8 @@ body .body-sobre-mi {
       .viajes-main .viaje-australia .australia-texto {
         grid-area: texto; }
         .viajes-main .viaje-australia .australia-texto h1 {
-          font-size: 1rem; }
+          font-size: 1rem;
+          margin-top: 0.5rem; }
         .viajes-main .viaje-australia .australia-texto p {
           font-size: 0.8rem;
           text-align: left;
